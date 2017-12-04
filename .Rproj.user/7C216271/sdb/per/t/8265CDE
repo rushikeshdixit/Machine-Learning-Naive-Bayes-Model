@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "Clean_String <- function(string){\n  # Lowercase\n  temp <- tolower(string)\n  #' Remove everything that is not a number or letter (may want to keep more \n  #' stuff in your actual analyses). \n  temp <- stringr::str_replace_all(temp,\"[^a-zA-Z\\\\s]\", \" \")\n  # Shrink down to just one white space\n  temp <- stringr::str_replace_all(temp,\"[\\\\s]+\", \" \")\n  # Split it\n  temp <- stringr::str_split(temp, \" \")[[1]]\n  # Get rid of trailing \"\" if necessary\n  indexes <- which(temp == \"\")\n  if(length(indexes) > 0){\n    temp <- temp[-indexes]\n  } \n  return(unique(temp))\n}\n",
+    "created" : 1508642717305.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4032532898",
+    "id" : "8265CDE",
+    "lastKnownWriteTime" : 1508739044,
+    "last_content_update" : 1508739044472,
+    "path" : "~/Documents/Masters/ML/Project2/Project2/NaiveBayes.R",
+    "project_path" : "NaiveBayes.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
